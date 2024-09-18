@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="middle-text">
+    <h1 class="title-text">Login</h1>
+    <img src="assets/logo.png" alt="login" class="login-image"/>
+  </div>
+  <div class="form-text">
+    <form class="form-container" [formGroup]="loginForm" (ngSubmit)="login()">
+      <ul>
+        <li>
+          <div class="form-group">
+            <h2>Email:</h2>
+            <mat-form-field class="form-field">
+              <input matInput formControlName="email" type="email" placeholder="Enter your email">
+            </mat-form-field>
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <h2>Password:</h2>
+            <mat-form-field class="form-field">
+              <input matInput formControlName="password" type="password" placeholder="Enter your password">
+            </mat-form-field>
+          </div>
+        </li>
+      </ul>
+      <button class="log" type="submit" mat-button>Log In</button>
+      <a class="new-member">New Member? <span class="register-now" routerLink="/register">Register Now!</span></a>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="middle-text">
+    <h1 class="title-text">Register</h1>
+    <img src="assets/logo.png" alt="login" class="login-image"/>
+  </div>
+  <div class="form-text">
+    <form class="form-container" [formGroup]="registerForm" (ngSubmit)="register()">
+
+      <ul>
+        <li>
+          <div class="form-group">
+            <h2>Full Name:</h2>
+            <mat-form-field class="form-field">
+              <input matInput formControlName="name" type="name" placeholder="Enter your Full Name">
+            </mat-form-field>
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <h2>Email:</h2>
+            <mat-form-field class="form-field">
+              <input matInput formControlName="password" type="password" placeholder="Enter your email">
+            </mat-form-field>
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <h2>Password:</h2>
+            <mat-form-field class="form-field">
+              <input matInput formControlName="email" type="email" placeholder="Enter your password">
+            </mat-form-field>
+          </div>
+        </li>
+        <li *ngIf="isOwner">
+          <div class="form-group">
+            <h2>Phone:</h2>
+            <mat-form-field class="form-field">
+              <input matInput formControlName="phone" type="phone" placeholder="Enter your phone number">
+            </mat-form-field>
+          </div>
+        </li>
+        <li *ngIf="isOwner">
+          <div class="form-group">
+            <h2>Address:</h2>
+            <mat-form-field class="form-field">
+              <input matInput formControlName="address" type="address" placeholder="Enter your addres">
+            </mat-form-field>
+          </div>
+        </li>
+        <li *ngIf="isVet">
+          <div class="form-group">
+            <h2>Clinic Name</h2>
+            <mat-form-field class="form-field">
+              <input matInput formControlName="clinicName" type="clinicName" placeholder="Enter your clinic name">
+            </mat-form-field>
+          </div>
+        </li>
+        <li *ngIf="isVet">
+          <div class="form-group">
+            <h2>Clinic Location</h2>
+            <mat-form-field class="form-field">
+              <input matInput formControlName="locationClinic" type="locationClinic" placeholder="Enter your clinic location">
+            </mat-form-field>
+          </div>
+        </li>
+        <li *ngIf="isVet">
+          <div class="form-group">
+            <h2>Clinic Description</h2>
+            <mat-form-field class="form-field">
+              <input matInput formControlName="descriptionClinic" type="descriptionClinic" placeholder="Enter your clinic description">
+            </mat-form-field>
+          </div>
+        </li>
+        <li *ngIf="isVet">
+          <div class="form-group">
+            <h2>Clinic Phone</h2>
+            <mat-form-field class="form-field">
+              <input matInput formControlName="phoneClinic" type="phoneClinic" placeholder="Enter your clinic phone">
+            </mat-form-field>
+          </div>
+        </li>
+      </ul>
+      <div class="form-group">
+        <label>
+          <input type="radio" formControlName="userType" value="Owner" (change)="onUserTypeChange('Owner')"> Owner
+        </label>
+        <label>
+          <input type="radio" formControlName="userType" value="Vet" (change)="onUserTypeChange('Vet')"> Vet
+        </label>
+      </div>
+      <button class="log" type="submit" mat-button>Register</button>
+    </form>
+  </div>
+</div>
