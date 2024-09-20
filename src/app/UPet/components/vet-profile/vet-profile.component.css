@@ -1,0 +1,53 @@
+.container{
+  background-color: #0C1B3E;
+  height: 100vh;
+}
+.right-row{
+  background-color: white;
+  width: 50%;
+  margin-top: 90px;
+  border-radius:5px;
+  height: 90vh;
+  justify-content: center;
+  text-align: center;
+}
+.right-row h1{
+  color:black;
+  margin-top: 20px;
+}
+.body{
+  font-size: 20px;
+  padding: 50px;
+  justify-content: start;
+  text-align: start;
+}
+.vet-image{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 60%;
+  height: 40%;
+  border-radius: 5px;
+}
+h1{
+  color:white;
+}
+.left-row{
+  width: 50%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  align-items: center;
+  text-align: center;
+}
+.left-row button{
+  margin-top: 50px;
+  width: 30%;
+  font-size: 25px;
+  color:white;
+  background-color: #ff8e85;
+}
+.row{
+  display: flex;
+  width: 100%;
+}

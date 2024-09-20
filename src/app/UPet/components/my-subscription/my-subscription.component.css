@@ -1,0 +1,37 @@
+.container{
+  background-color: #0C1B3E;
+  height: 100vh;
+
+  justify-content: center;
+  text-align: center;
+}
+
+* {
+  color: white;
+}
+.row{
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+
+}
+mat-card{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+mat-card-title h2{
+  color:black;
+}
+mat-card-content h3{
+  color:black ;
+}
+.log {
+  background-color: #ff8e85;
+  color: white !important;
+  width: 10%;
+  font-size: 20px;
+  display: block;
+  margin: 20px auto;
+}

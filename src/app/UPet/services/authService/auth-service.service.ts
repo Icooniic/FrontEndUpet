@@ -20,4 +20,8 @@ export class AuthServiceService extends BaseService<any> {
     return this.http.post(`${this.basePath}${this.resourceEndpoint}/sign-up`, data, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
+  getUser(data: any){
+    return this.http.post(`${this.basePath}${this.resourceEndpoint}/forgot-password`,data, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
 }

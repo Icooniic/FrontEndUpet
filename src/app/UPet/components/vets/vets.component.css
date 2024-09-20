@@ -1,0 +1,61 @@
+.container {
+  background-color: #0C1B3E;
+  height: 100vh;
+}
+
+.centered-input {
+  margin-inline: 25%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-form-field mat-label {
+  justify-content: center;
+  display: flex;
+  align-content: center;
+}
+
+.vet-list {
+  margin: 20px;
+}
+
+.vet-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.vet-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.vet-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.vet-details span {
+  margin-right: 20px;
+}
+.vet-item button{
+  color:white;
+  background-color: #ff8e85;
+}
+
+ button {
+  margin-left: auto;
+   width: 25%;
+}

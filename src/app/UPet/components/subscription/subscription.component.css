@@ -1,0 +1,87 @@
+
+h1{
+  margin-top: 20px;
+}
+*{
+  padding: 5px;
+  color: white;
+}
+p{
+  font-size:180%;
+}
+mat-card-title h2{
+  color: black;
+}
+mat-card-content h3{
+  color:black;
+}
+.container {
+  background-color: #0C1B3E;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+* {
+  padding: 5px;
+  color: white;
+}
+
+p {
+  font-size: 180%;
+}
+
+mat-card-title h2 {
+  color: black;
+}
+
+mat-card-content h3 {
+  color: black;
+}
+
+.row {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 70px;
+  padding-right: 70px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-direction: row;
+}
+
+mat-card {
+  width: 25%;
+  cursor: pointer;
+}
+
+button.subscribe-button{
+  font-weight: lighter;
+  margin-top: 20px;
+  height: 6%;
+  font-size: 30px;
+  width: 15%;
+  background-color:#ff8e85;
+  color:white;
+}
+.row{
+  margin-top: 50px;
+  margin-bottom:50px;
+  padding-left: 70px;
+  padding-right: 70px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-direction: row;
+}
+mat-card{
+width: 25%;
+}
+mat-card.selected {
+  border: 2px solid #ff8e85;
+  background-color: #ff8e85;
+}

@@ -1,0 +1,30 @@
+<div class="container">
+  <div *ngIf="pet" class="row">
+    <div class="left-row">
+      <h1>{{pet.name}}</h1>
+      <h2>{{pet.breed}}</h2>
+      <img [src]="pet.image_url" alt="vet image" class="pet-image"/>
+      <button (click)="goBack()" mat-button>Back</button>
+    </div>
+    <div class="right-row">
+      <h1>Historial Information</h1>
+      <div class="body">
+        <p>Vaccines: {{pet.description}}</p>
+        <p>Surgeries: {{pet.illnes}}</p>
+        <p>Diseases: {{pet.vaccines}}</p>
+      </div>
+
+      <button mat-button style="color:white;">
+        Add Vaccine
+      </button>
+      <button mat-button style="color:white;">
+        Add Surgery
+      </button>
+      <button mat-button style="color:white;">
+        Add disease
+      </button>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Your Subscription</h1>
+  <p>This is your actual plan,you can change it whenever you want</p>
+  <div clas="rows">
+    <mat-card *ngIf="selectedPlan==='Basic' ">
+      <mat-card-title>
+        <h2>Basic</h2>
+      </mat-card-title>
+      <mat-card-content>
+        <h3>$3</h3>
+      </mat-card-content>
+    </mat-card>
+      <mat-card *ngIf="selectedPlan==='Advanced' ">
+      <mat-card-title>
+        <h2>Advanced</h2>
+      </mat-card-title>
+      <mat-card-content>
+        <h3>$8</h3>
+      </mat-card-content>
+    </mat-card>
+    <mat-card *ngIf="selectedPlan==='Pro+' ">
+    <mat-card-title>
+      <h2>Pro+</h2>
+    </mat-card-title>
+    <mat-card-content>
+      <h3>$15</h3>
+    </mat-card-content>
+    </mat-card>
+  </div>
+  <div *ngIf="selectedPlan">
+    <p *ngIf="selectedPlan ==='Basic'" >Basic Plan: Basic plan will give you the benefit of having one pet</p>
+    <p *ngIf="selectedPlan ==='Advanced'"  >Advanced Plan: The Advanced plan will give you the benefit of having more than 1 and less than 3</p>
+    <p *ngIf="selectedPlan ==='Pro+'" >Pro+ Plan: The Pro+ plan will give you the benefit of having more than 3 and less than 5</p>
+    </div>
+  <div class="row">
+    <button class="log" mat-button routerLink="/subscription">Change</button>
+    <button class="log" mat-button routerLink="/home">Back</button>
+  </div>
+
+
+</div>

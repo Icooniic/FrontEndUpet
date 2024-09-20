@@ -1,0 +1,23 @@
+<div class="container">
+  <div *ngIf="vet" class="row">
+    <div class="left-row">
+      <h1>{{vet.name}}</h1>
+      <img src="https://www.portalveterinaria.com/upload/20210308083512mujerveterinaria.jpg" alt="vet image" class="vet-image"/>
+      <button (click)="goBack()" mat-button>Back</button>
+    </div>
+    <div class="right-row">
+      <h1>{{vet.clinicName}}</h1>
+     <div class="body">
+       <p>Addres: {{vet.description}}</p>
+       <p>Experience: {{vet.experience}}</p>
+       <p>Phone: {{vet.phone}}</p>
+       <p>Services: {{vet.services}}</p>
+       <p>Open Hours: {{vet.openHours}}</p>
+       <p>Cosing Hours: {{vet.closeHours}}</p>
+     </div>
+    </div>
+
+
+  </div>
+
+</div>

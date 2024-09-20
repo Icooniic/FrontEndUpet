@@ -1,0 +1,86 @@
+.container{
+  background-color: #0C1B3E;
+  height: 100vh;
+}
+.right-row{
+  background-color: white;
+  width: 50%;
+  margin-top: 90px;
+  border-radius:5px;
+  height: 90vh;
+  justify-content: center;
+  text-align: center;
+}
+.right-row h1{
+  color:black;
+  margin: 0;
+  padding-top:40px;
+}
+.body{
+  font-size: 20px;
+  justify-content: center;
+  text-align: center;
+}
+.vet-image{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 60%;
+  height: 40%;
+  border-radius: 5px;
+}
+h1{
+  color:white;
+}
+h3{
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+.left-row{
+  width: 50%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  align-items: center;
+  text-align: center;
+}
+.left-row button{
+  margin-top: 50px;
+  width: 30%;
+  font-size: 25px;
+  color:white;
+  background-color: #ff8e85;
+}
+.row{
+  display: flex;
+  width: 100%;
+}
+.card{
+  background-color: #0C1B3E;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+.cards{
+  margin:50px
+}
+.cards .card{
+  display: flex;
+  justify-content: start;
+  text-align: start;
+  margin-top: 50px;
+}
+.cards .card h2{
+  margin-left: 15px;
+  margin-top: 15px;
+  font-size: 20px;
+}
+.card  button {
+  color: white;
+  margin-left: auto;
+}

@@ -1,1 +1,85 @@
-<p>add-pet works!</p>
+<div class="container">
+  <div class="middle-text">
+    <h1 class="title-text">Add Pet</h1>
+    <img src="assets/logo.png" alt="pet" class="pet-image"/>
+  </div>
+  <div class="form-text">
+    <div *ngIf="successMessage" class="success-message">
+      Pet added successfully!
+    </div>
+    <div *ngIf="errorMessage" class="error-message">
+      Failed to add pet. Please try again.
+    </div>
+    <form class="form-container" [formGroup]="createPetForm" (ngSubmit)="createPet()">
+      <ul>
+        <li>
+          <div class="form-group">
+            <h2>Name:</h2>
+            <mat-form-field class="form-field">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name" type="email" >
+            </mat-form-field>
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <h2>Specie:</h2>
+            <mat-form-field class="form-field">
+              <mat-label>Specie</mat-label>
+              <input matInput formControlName="species" >
+            </mat-form-field>
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <h2>Breed:</h2>
+            <mat-form-field class="form-field">
+              <mat-label>Breed</mat-label>
+              <input matInput formControlName="breed"  >
+            </mat-form-field>
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <h2>Image:</h2>
+            <mat-form-field class="form-field">
+              <mat-label>Image Url</mat-label>
+              <input matInput formControlName="image_url"  >
+            </mat-form-field>
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <h2>Weight:</h2>
+            <mat-form-field class="form-field">
+              <mat-label>Weight</mat-label>
+              <input matInput formControlName="weight" >
+            </mat-form-field>
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <h2>Birthday:</h2>
+            <mat-form-field class="form-field">
+              <mat-label>Birthday</mat-label>
+              <input matInput formControlName="birthdate" >
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <h2>Gender:</h2>
+            <label>
+              <input type="radio" formControlName="gender" value="Male"> Male
+            </label>
+            <label>
+              <input type="radio" formControlName="gender" value="Female"> Female
+            </label>
+          </div>
+        </li>
+      </ul>
+      <div class="row">
+        <button class="log" type="submit" mat-button>Add Pet </button>
+        <button class="log" type="button" mat-button routerLink="/home">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

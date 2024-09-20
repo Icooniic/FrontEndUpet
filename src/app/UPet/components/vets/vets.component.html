@@ -1,0 +1,25 @@
+
+<div class="container">
+  <div class="centered-input">
+    <mat-form-field>
+      <mat-label>Search Vet By Name</mat-label>
+      <input matInput type="text" [(ngModel)]="searchText" (ngModelChange)="searchVet()">
+    <button mat-icon-button matSuffix>
+      <mat-icon>
+        search
+      </mat-icon>
+    </button>
+    </mat-form-field>
+  </div>
+  <div class="vet-list">
+    <div class="vet-item" *ngFor="let vet of vets">
+      <img [src]="vet.image_url" alt="vet image" class="vet-image"/>
+      <div class="vet-details">
+        <span>{{vet.name}}</span>
+        <span>{{vet.clinicName}}</span>
+
+      </div>
+      <button mat-button (click)="viewDetails(vet)">View Details</button>
+    </div>
+  </div>
+</div>

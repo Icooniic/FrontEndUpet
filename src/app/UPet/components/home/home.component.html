@@ -1,0 +1,31 @@
+<!-- src/app/UPet/components/home/home.component.html -->
+<div class="container">
+  <div class="row left-row">
+
+      <div class="columns">
+        <img src="https://media.istockphoto.com/id/1386479313/es/foto/feliz-mujer-de-negocios-afroamericana-millennial-posando-aislada-en-blanco.jpg?s=612x612&w=0&k=20&c=JP0NBxlxG2-bdpTRPlTXBbX13zkNj0mR5g1KoOdbtO4=" alt="imagen" class="home-image"/>
+        <h1>Hello, {{name}} Good Morning!</h1>
+      </div>
+    <div *ngIf="isOwner" class="pets">
+      <h1 >My Pets</h1>
+      <div class="rows">
+        <div class="columns" *ngFor="let pet of pets">
+          <div class="card">
+            <img [src]="pet.image_url" alt="pet" class="pet-image"/>
+            <h2  >{{pet.name}}</h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+  <div class="row right-row">
+    <h2>
+      <span routerLink="/add-pet">+ Add Pet</span></h2>
+  </div>
+</div>

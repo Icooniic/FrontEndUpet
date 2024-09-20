@@ -1,13 +1,22 @@
 <mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>My App</span>
+  <img src="assets/logo.png" alt="login" class="login-image"/>
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
+  <button mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" [ngClass]="{'selected': selectedButton === 'home'}" (click)="selectButton('home')" routerLink="/home">
+    <h1>Home</h1>
   </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
+  <button mat-button class="example-icon" aria-label="Example icon-button with share icon" [ngClass]="{'selected': selectedButton === 'vets'}" (click)="selectButton('vets')" routerLink="/vets">
+    <h1>Vets</h1>
+  </button>
+  <button mat-button class="example-icon" aria-label="Example icon-button with share icon" [ngClass]="{'selected': selectedButton === 'subscription'}" (click)="selectButton('subscription')" routerLink="/my-subscription">
+    <h1>Subscription</h1>
+  </button>
+  <button mat-button class="example-icon" aria-label="Example icon-button with share icon" [ngClass]="{'selected': selectedButton === 'profile'}" (click)="selectButton('profile')" routerLink="/profile">
+    <h1>Profile</h1>
+  </button>
+  <button *ngIf="isOwner" mat-button class="example-icon" aria-label="Example icon-button with share icon" [ngClass]="{'selected': selectedButton === 'pets'}" (click)="selectButton('pets')" routerLink="/pets">
+    <h1>Pets</h1>
+  </button>
+  <button *ngIf="isOwner" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" [ngClass]="{'selected': selectedButton === 'log'}" (click)="selectButton('log')" routerLink="/login">
+    <mat-icon>logout</mat-icon>
   </button>
 </mat-toolbar>
