@@ -1,0 +1,98 @@
+<div class="container">
+  <div class="middle-text">
+    <h1 class="title-text">Update Medical History</h1>
+    <img [src]="pet.image_url" alt="login" class="pet-image"/>
+  </div>
+  <div class="form-text">
+    <form class="form-container" [formGroup]="addHistoryForm" (ngSubmit)="onSubmit()">
+      <div *ngIf="selectedType==='vaccines'" formGroupName="vaccines">
+        <ul>
+          <li>
+            <div class="form-group">
+              <h2>Name:</h2>
+              <mat-form-field class="form-field">
+                <input matInput formControlName="name"  placeholder="Enter the name">
+              </mat-form-field>
+            </div>
+          </li>
+          <li>
+            <div class="form-group">
+              <h2>Vaccine Date:</h2>
+              <mat-form-field class="form-field">
+                <input matInput formControlName="date"  placeholder="Enter the date">
+              </mat-form-field>
+            </div>
+          </li>
+          <li>
+            <div class="form-group">
+              <h2>Vaccine Type:</h2>
+              <mat-form-field class="form-field">
+                <input matInput formControlName="type"  placeholder="Enter the type">
+              </mat-form-field>
+            </div>
+          </li>
+          <li>
+            <div class="form-group">
+              <h2>Dose:</h2>
+              <mat-form-field class="form-field">
+                <input matInput formControlName="dose"  placeholder="Enter the dose">
+              </mat-form-field>
+            </div>
+          </li>
+          <li>
+            <div class="form-group">
+              <h2>Location:</h2>
+              <mat-form-field class="form-field">
+                <input matInput formControlName="location" type="password" placeholder="Enter the location">
+              </mat-form-field>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div *ngIf="selectedType==='diseases'" formGroupName="diseases">
+        <ul>
+          <li>
+            <div class="form-group">
+              <h2>Name:</h2>
+              <mat-form-field class="form-field">
+                <input matInput formControlName="name"  placeholder="Enter the Name">
+              </mat-form-field>
+            </div>
+          </li>
+          <li>
+            <div class="form-group">
+              <h2>Date:</h2>
+              <mat-form-field class="form-field">
+                <input matInput formControlName="date"  placeholder="Enter the Date">
+              </mat-form-field>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div *ngIf="selectedType==='surgeries'" formGroupName="surgeries">
+        <ul>
+          <li>
+            <div class="form-group">
+              <h2>Description:</h2>
+              <mat-form-field class="form-field">
+                <input matInput formControlName="description" placeholder="Enter the name">
+              </mat-form-field>
+            </div>
+          </li>
+          <li>
+            <div class="form-group">
+              <h2>Date:</h2>
+              <mat-form-field class="form-field">
+                <input matInput formControlName="date"  placeholder="Enter the date">
+              </mat-form-field>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="buttons">
+      <button class="log" type="submit" mat-button>Añadir</button>
+      <button (click)="back()" class="log" mat-button>Back</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -2,6 +2,10 @@
   background-color: #0C1B3E;
   height: 100vh;
 }
+*{
+  padding: 0;
+  margin: 0;
+}
 .right-row{
   background-color: white;
   width: 50%;
@@ -17,7 +21,7 @@
   margin-top: 20px;
 }
 .right-row button{
-  margin-top:35%;
+  margin-top:5%;
 }
 .body{
   font-size: 20px;

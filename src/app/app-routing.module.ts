@@ -11,6 +11,7 @@ import {VetProfileComponent} from "./UPet/components/vet-profile/vet-profile.com
 import {MySubscriptionComponent} from "./UPet/components/my-subscription/my-subscription.component";
 import {MyPetsComponent} from "./UPet/components/my-pets/my-pets.component";
 import {PetDetailComponent} from "./UPet/components/pet-detail/pet-detail.component";
+import {AddHistoryComponent} from "./UPet/components/add-history/add-history.component";
 
 const routes: Routes = [
   {path:'', component:LoginComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:'vet-detail',component:VetProfileComponent},
   {path:'my-subscription',component:MySubscriptionComponent},
   {path:'pets',component:MyPetsComponent},
+  {path:'add-history',component: AddHistoryComponent},
   {path:'pet-detail',component:PetDetailComponent}
 ];
 

@@ -9,19 +9,29 @@
     <div class="right-row">
       <h1>Historial Information</h1>
       <div class="body">
-        <p>Vaccines: {{pet.description}}</p>
-        <p>Surgeries: {{pet.illnes}}</p>
-        <p>Diseases: {{pet.vaccines}}</p>
+        <p>Vaccines: </p>
+        <div *ngFor="let vaccine of vaccines">
+          <p>{{vaccine.name}}</p>
+        </div>
+        <p>Surgeries: </p>
+        <div *ngFor="let surgery of surgeries">
+          <p>{{surgery.description}}</p>
+        </div>
+        <p>Diseases: </p>
+        <div *ngFor="let disease of diseases">
+          <p>{{disease.name}}</p>
+
+        </div>
       </div>
 
-      <button mat-button style="color:white;">
+      <button (click)="addHistory('vaccines')" mat-button style="color:white;">
         Add Vaccine
       </button>
-      <button mat-button style="color:white;">
+      <button (click)="addHistory('surgeries')" mat-button style="color:white;">
         Add Surgery
       </button>
-      <button mat-button style="color:white;">
-        Add disease
+      <button  (click)="addHistory('diseases')" mat-button style="color:white;">
+        Add Disease
       </button>
     </div>
 

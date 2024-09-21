@@ -16,7 +16,7 @@ export class MedicalService extends BaseService<any>{
       .pipe(retry(2), catchError(this.handleError));
 
   }
-  creatVaccine(data:any,id:number){
+  createVaccine(data:any,id:number){
     return this.http.post(`${this.basePath}${this.resourceEndpoint}/${id}/vaccines`, data, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
 
