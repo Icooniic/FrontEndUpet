@@ -1,3 +1,3 @@
 export const environment = {
-  serverBasePath: 'http://127.0.0.1:8000/api/v1'
+  serverBasePath: 'https://back-end-upeet.vercel.app/api/v1'
 };
