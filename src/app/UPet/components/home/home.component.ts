@@ -20,10 +20,10 @@ export class HomeComponent implements OnInit{
   ngOnInit() {
     const userId = parseInt(localStorage.getItem('userId')!);
     localStorage.getItem('userType') === 'Owner' ? this.isOwner = true : this.isVet = true;
+
     if(this.isOwner){
       this.ownerService.getOwner(userId).subscribe((response:any )=>{
         this.name = response.name;
-        console.log(response.image_url)
         this.image = response.image_url;
       })
       this.petService.getPets(userId).subscribe((response:any)=>{
@@ -33,6 +33,11 @@ export class HomeComponent implements OnInit{
 
     }
     if(this.isVet){
+      this.vetService.getVet(userId).subscribe((response:any )=>{
+        this.name = response.name;
+        this.image = response.image_url;
+      })
+
 
     }
 

@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  serverBasePath: 'https://back-end-upeet.vercel.app/api/v1'
+  serverBasePath: 'https://back-end-upett.vercel.app/api/v1'
 };

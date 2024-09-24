@@ -9,8 +9,9 @@
       <h1>{{profile.name}}</h1>
       <div class="body">
         <h3 *ngIf="isOwner">Pet Owner</h3>
+        <h3 *ngIf="isVet"> Veterinarian</h3>
         <div class="cards">
-          <div class="card">
+          <div class="card" *ngIf="isOwner">
             <mat-icon>pets</mat-icon>
             <h2>Pets</h2>
 

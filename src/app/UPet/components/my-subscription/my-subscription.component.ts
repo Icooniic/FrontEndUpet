@@ -16,7 +16,7 @@ export class MySubscriptionComponent implements OnInit{
   ngOnInit(): void {
     const type=localStorage.getItem('userType')
     if(type==='Owner'){
-      this.ownerService.getOwner(parseInt(localStorage.getItem('ownerId')!)).subscribe(
+      this.ownerService.getOwner(parseInt(localStorage.getItem('userId')!)).subscribe(
         (data:any)=>{
           console.log(data)
           this.selectedPlan=data.subscriptionType;
@@ -28,11 +28,10 @@ export class MySubscriptionComponent implements OnInit{
       )
     }
     if(type==='Vet'){
-      this.vetSerivce.getVet(parseInt(localStorage.getItem('vetId')!)).subscribe(
+      this.vetSerivce.getVet(parseInt(localStorage.getItem('userId')!)).subscribe(
         (data:any)=>{
-
-          console.log(data)
           this.selectedPlan=data.subscriptionType;
+          console.log(data)
         },
         (error:any)=>{
           console.log(error)

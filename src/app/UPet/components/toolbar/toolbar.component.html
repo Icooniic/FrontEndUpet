@@ -16,7 +16,7 @@
   <button *ngIf="isOwner" mat-button class="example-icon" aria-label="Example icon-button with share icon" [ngClass]="{'selected': selectedButton === 'pets'}" (click)="selectButton('pets')" routerLink="/pets">
     <h1>Pets</h1>
   </button>
-  <button *ngIf="isOwner" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" [ngClass]="{'selected': selectedButton === 'log'}" (click)="selectButton('log')" routerLink="/login">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" [ngClass]="{'selected': selectedButton === 'log'}" (click)="selectButton('log')" routerLink="/login">
     <mat-icon>logout</mat-icon>
   </button>
 </mat-toolbar>

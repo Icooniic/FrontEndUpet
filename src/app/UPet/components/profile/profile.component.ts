@@ -37,8 +37,8 @@ ngOnInit(){
   }
   if(this.type==='Vet'){
     this.isVet = true;
-    const vetId = parseInt(localStorage.getItem('vetId')!);
-    this.vetService.getVet(vetId).subscribe(
+    const userId = parseInt(localStorage.getItem('userId')!);
+    this.vetService.getVet(userId).subscribe(
       (response:any)=>{
         this.profile = response;
       },
